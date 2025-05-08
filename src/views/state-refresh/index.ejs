@@ -1,0 +1,421 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DKM Mesjid Raudhatul Jannah - Vote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        main {
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 30px;
+            display: none;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #2196F3;
+            margin-top: 20px;
+        }
+
+
+        input[list] {
+            height: 40px;
+        }
+
+        /* .select2-container--open {
+            position: absolute;
+            top: 500.5px !important;
+             left: 323px; 
+        }
+
+        */
+        .select2-container .select2-selection--single {
+            height: 40px !important;
+            padding: 6px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            margin-top: 10px;
+
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 30px;
+            color: #333;
+
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 45px;
+            right: 10px;
+            margin-top: 14px;
+        }
+
+        /* Optional: make dropdown items look nicer */
+        .select2-results__option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .select2-container>.select2-dropdown .select2-dropdown--below {
+            top: -12px !important;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        DKM Mesjid Raudhatul Jannah
+    </header>
+
+    <main>
+        <h2>Pemilihan Ketua DKM Mesjid 2025</h2>
+        <button id="voteBtn">Vote Here</button>
+
+        <form id="voteForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="house">House Number:</label>
+            <input type="text" id="house" name="house" required>
+
+            <label for="candidate">Suggested Candidate:</label>
+            <!-- <input list="candidateList" id="candidate" name="candidate" required> -->
+            <select id="candidate" style="width: 100%;margin-top: 10px;">
+                <option value="ABDUL HAKIM ALIMUDDIN 01/07">ABDUL HAKIM ALIMUDDIN 01/07</option>
+                <option value="ABRAHAM OKTORE PAYER 16/26">ABRAHAM OKTORE PAYER 16/26</option>
+                <option value="ACHMAD ENDI SADIKIN 03/60">ACHMAD ENDI SADIKIN 03/60</option>
+                <option value="ACHMAD FAIZ 03/50">ACHMAD FAIZ 03/50</option>
+                <option value="ADE KURNIAWAN 05/07">ADE KURNIAWAN 05/07</option>
+                <option value="ADE RUCHJA DARSUMIHARDJA 30/12">ADE RUCHJA DARSUMIHARDJA 30/12</option>
+                <option value="ADLIN 10/01">ADLIN 10/01</option>
+                <option value="AGUNG SETIO WAHONO 21/12">AGUNG SETIO WAHONO 21/12</option>
+                <option value="AGUS JUNAEDI 12/08">AGUS JUNAEDI 12/08</option>
+                <option value="AGUS KURNIAWAN 19/03">AGUS KURNIAWAN 19/03</option>
+                <option value="AGUS SUPRIYADI 27/09">AGUS SUPRIYADI 27/09</option>
+                <option value="AGUS YULIANTO 06/06">AGUS YULIANTO 06/06</option>
+                <option value="AHMAD FAISAL SAID 03/56">AHMAD FAISAL SAID 03/56</option>
+                <option value="AHMAD ZAMACHSYARI 01/23">AHMAD ZAMACHSYARI 01/23</option>
+                <option value="AI SANTINI 17/01">AI SANTINI 17/01</option>
+                <option value="AIDIA PUTRA 29/11">AIDIA PUTRA 29/11</option>
+                <option value="AILY WARSITA 02/27">AILY WARSITA 02/27</option>
+                <option value="AJUN KURNIAWAN 23/17">AJUN KURNIAWAN 23/17</option>
+                <option value="AKUP SAPUTRA 33/06">AKUP SAPUTRA 33/06</option>
+                <option value="ALI KARCI 10/10">ALI KARCI 10/10</option>
+                <option value="ALY MAHMUDI 26/05">ALY MAHMUDI 26/05</option>
+                <option value="AMINAH SEPTIYATI 33/02">AMINAH SEPTIYATI 33/02</option>
+                <option value="ANANG ABDULLAH 16/12">ANANG ABDULLAH 16/12</option>
+                <option value="ANDRI SETIAWAN 33/10">ANDRI SETIAWAN 33/10</option>
+                <option value="ANITA NURUL SITI FAUZIAH (OMA) 17/06">ANITA NURUL SITI FAUZIAH (OMA) 17/06</option>
+                <option value="ANTO 17/07">ANTO 17/07</option>
+                <option value="APRILIANTI HARYONO 37/01">APRILIANTI HARYONO 37/01</option>
+                <option value="ARI ANTORO 09/01">ARI ANTORO 09/01</option>
+                <option value="ARI WISNU BRATA 06/11">ARI WISNU BRATA 06/11</option>
+                <option value="ARIEF ARIFIANTO 26/02">ARIEF ARIFIANTO 26/02</option>
+                <option value="ARIEF RASWANTO 26/02">ARIEF RASWANTO 26/02</option>
+                <option value="ARIF FITRIYANTO 02/53">ARIF FITRIYANTO 02/53</option>
+                <option value="ARIF PRABOWO 15/20">ARIF PRABOWO 15/20</option>
+                <option value="ARIF ZAENUDDIN 27/18">ARIF ZAENUDDIN 27/18</option>
+                <option value="ARING PANCA ASTUTIK 29/01">ARING PANCA ASTUTIK 29/01</option>
+                <option value="ARIS KURNIAWAN 16/06">ARIS KURNIAWAN 16/06</option>
+                <option value="ARIS WIJAYA 16/18">ARIS WIJAYA 16/18</option>
+                <option value="ARTI SANTI WIDORINI 21/12">ARTI SANTI WIDORINI 21/12</option>
+                <option value="ASEP KURNIAWAN 17/01">ASEP KURNIAWAN 17/01</option>
+                <option value="ASNAWI 02/38">ASNAWI 02/38</option>
+                <option value="AWAL AMARUDDIN MUSYAHIDAH 29/28">AWAL AMARUDDIN MUSYAHIDAH 29/28</option>
+                <option value="BAGUS TRIYOGO 21/07">BAGUS TRIYOGO 21/07</option>
+                <option value="BENI SUNARYA 11/10">BENI SUNARYA 11/10</option>
+                <option value="BUDI LESMANA 28/03">BUDI LESMANA 28/03</option>
+                <option value="BUDI SANTOSO 16/01">BUDI SANTOSO 16/01</option>
+                <option value="BUNYAMIN 35/01">BUNYAMIN 35/01</option>
+                <option value="BURQI BAITUNI BAITURQI 32/02">BURQI BAITUNI BAITURQI 32/02</option>
+                <option value="CAHYANTO HARIWICAKSONO 27/08">CAHYANTO HARIWICAKSONO 27/08</option>
+                <option value="CARSADI SUPARNO 17/12">CARSADI SUPARNO 17/12</option>
+                <option value="CHONG YI CHIEH 10/09">CHONG YI CHIEH 10/09</option>
+                <option value="DADANG KARNA HIDAYAT 17/01">DADANG KARNA HIDAYAT 17/01</option>
+                <option value="DANANG PRAYOGA 19/09">DANANG PRAYOGA 19/09</option>
+                <option value="DARMADI BUWONI R.P 19/15">DARMADI BUWONI R.P 19/15</option>
+                <option value="DARMANSYAH YAMIN NUSANTARA 23/11">DARMANSYAH YAMIN NUSANTARA 23/11</option>
+                <option value="DAVID GUNAWAN 00/12">DAVID GUNAWAN 00/12</option>
+                <option value="DEHWIN SEPTAMALA 18/10">DEHWIN SEPTAMALA 18/10</option>
+                <option value="DELVINO DWI IRAWAN 00/26">DELVINO DWI IRAWAN 00/26</option>
+                <option value="DENI FEBRIADI 37/05">DENI FEBRIADI 37/05</option>
+                <option value="DEO FORENZA 16/05">DEO FORENZA 16/05</option>
+                <option value="DETI TRI KURNIATI 01/17">DETI TRI KURNIATI 01/17</option>
+                <option value="DIANA APRIASIH HIDAYATI 30/16">DIANA APRIASIH HIDAYATI 30/16</option>
+                <option value="DID TIAWARMAH 07/05">DID TIAWARMAH 07/05</option>
+                <option value="DIPO ADI SUKMA 09/08">DIPO ADI SUKMA 09/08</option>
+                <option value="DONI KURNIAWAN 01/17">DONI KURNIAWAN 01/17</option>
+                <option value="DONY ISKANDAR 01/05">DONY ISKANDAR 01/05</option>
+                <option value="DONY SETIAWAN 23/19">DONY SETIAWAN 23/19</option>
+                <option value="DUTA PAMUNGKAS 05/08">DUTA PAMUNGKAS 05/08</option>
+                <option value="EDDY SOENGKONO 28/10">EDDY SOENGKONO 28/10</option>
+                <option value="EDI 29/17">EDI 29/17</option>
+                <option value="EKO PRABOWO 23/20">EKO PRABOWO 23/20</option>
+                <option value="EKO PURWANTORO 28/20">EKO PURWANTORO 28/20</option>
+                <option value="EKO SUGIYARTO 10/02">EKO SUGIYARTO 10/02</option>
+                <option value="ERWAN M SETIAWAN 15/10">ERWAN M SETIAWAN 15/10</option>
+                <option value="EVANS AFRIANT NUGRAHA 12/03">EVANS AFRIANT NUGRAHA 12/03</option>
+                <option value="FAHRI SUDRAJAT ABDUL FATAH 30/12">FAHRI SUDRAJAT ABDUL FATAH 30/12</option>
+                <option value="FAHRUDDIN NASUTION 29/05">FAHRUDDIN NASUTION 29/05</option>
+                <option value="FAIZIN 00/53">FAIZIN 00/53</option>
+                <option value="FAWZIYYAH 01/07">FAWZIYYAH 01/07</option>
+                <option value="FEBRIANA WIJAYATI 30/16">FEBRIANA WIJAYATI 30/16</option>
+                <option value="FEBRIDA SATRIO P 11/16">FEBRIDA SATRIO P 11/16</option>
+                <option value="FERI 00/30">FERI 00/30</option>
+                <option value="FERRY P. WIBAWA 15/02">FERRY P. WIBAWA 15/02</option>
+                <option value="FIRDAUS YUSUF 17/05">FIRDAUS YUSUF 17/05</option>
+                <option value="FIRMANSYAH 00/55">FIRMANSYAH 00/55</option>
+                <option value="FREDY SUPIT 17/08">FREDY SUPIT 17/08</option>
+                <option value="GISKARA SAPUTRI 10/08">GISKARA SAPUTRI 10/08</option>
+                <option value="HADI HERDIANSYA 21/21">HADI HERDIANSYA 21/21</option>
+                <option value="HARI PRAMONO 07/06">HARI PRAMONO 07/06</option>
+                <option value="HARIANSYAH 18/05">HARIANSYAH 18/05</option>
+                <option value="HARYADI 20/06">HARYADI 20/06</option>
+                <option value="HENDRY SAPUTRA, ST 27/26">HENDRY SAPUTRA, ST 27/26</option>
+                <option value="HERMANTO 01/18">HERMANTO 01/18</option>
+                <option value="HERMANU 15/01">HERMANU 15/01</option>
+                <option value="HERMIZA 29/32">HERMIZA 29/32</option>
+                <option value="HERU IRIANTO PUTRO 00/26">HERU IRIANTO PUTRO 00/26</option>
+                <option value="HJ. DHARMAWATI 36/09">HJ. DHARMAWATI 36/09</option>
+                <option value="IKO SYAHRIAR 00/07">IKO SYAHRIAR 00/07</option>
+                <option value="IRMA TRISTIYANTI 12/05">IRMA TRISTIYANTI 12/05</option>
+                <option value="IRMANSYAH 05/06">IRMANSYAH 05/06</option>
+                <option value="IRWAN MARSISWANTO 11/07">IRWAN MARSISWANTO 11/07</option>
+                <option value="ISKANDAR HAMID 30/27">ISKANDAR HAMID 30/27</option>
+                <option value="ISWAHYUDI 05/03">ISWAHYUDI 05/03</option>
+                <option value="IVAN FABRIAN JOGASARA 19/21">IVAN FABRIAN JOGASARA 19/21</option>
+                <option value="IWAN MULYANA 29/06">IWAN MULYANA 29/06</option>
+                <option value="JAMALUDIN 32/03">JAMALUDIN 32/03</option>
+                <option value="JECKSON PRANATA 07/08">JECKSON PRANATA 07/08</option>
+                <option value="JOFYH SUSANTO 03/06">JOFYH SUSANTO 03/06</option>
+                <option value="JOKO IRIANTO 11/16">JOKO IRIANTO 11/16</option>
+                <option value="JUMADIR 09/09">JUMADIR 09/09</option>
+                <option value="JUNAIDI 08/03">JUNAIDI 08/03</option>
+                <option value="KRISTIANTI 23/10">KRISTIANTI 23/10</option>
+                <option value="KURNIAWAN 33/05">KURNIAWAN 33/05</option>
+                <option value="LEWIATI 23/10">LEWIATI 23/10</option>
+                <option value="LILIS PRIATIN 30/12">LILIS PRIATIN 30/12</option>
+                <option value="LUKMAN AZIS 19/08">LUKMAN AZIS 19/08</option>
+                <option value="LUKMAN HAKIM BAUTY 02/28">LUKMAN HAKIM BAUTY 02/28</option>
+                <option value="M FARID FADLI 29/18">M FARID FADLI 29/18</option>
+                <option value="M NURDIN 23/10">M NURDIN 23/10</option>
+                <option value="M RINALDI 21/17">M RINALDI 21/17</option>
+                <option value="M. RIYADUS SHOLIHIN 16/07">M. RIYADUS SHOLIHIN 16/07</option>
+                <option value="M. SAILI 10/08">M. SAILI 10/08</option>
+                <option value="M. WILLY P. SAPUTRA 01/16">M. WILLY P. SAPUTRA 01/16</option>
+                <option value="MOAMMAR KADHAFI 05/11">MOAMMAR KADHAFI 05/11</option>
+                <option value="MS TOTO MARYATI 28/10">MS TOTO MARYATI 28/10</option>
+                <option value="MUHAINI 01/06">MUHAINI 01/06</option>
+                <option value="MUHAMAD DUKI 01/06">MUHAMAD DUKI 01/06</option>
+                <option value="MUHAMAD NURALIM 29/03">MUHAMAD NURALIM 29/03</option>
+                <option value="MUHAMMAD AGUS TAUPIK 28/07">MUHAMMAD AGUS TAUPIK 28/07</option>
+                <option value="MUHAMMAD ASRI 11/12">MUHAMMAD ASRI 11/12</option>
+                <option value="MUHAMMAD HUSEIN 18/07">MUHAMMAD HUSEIN 18/07</option>
+                <option value="MUHAMMAD RAMAEDIUS MARDONA 02/18">MUHAMMAD RAMAEDIUS MARDONA 02/18</option>
+                <option value="MUHAMMAD SYAPI'I 30/11">MUHAMMAD SYAPI'I 30/11</option>
+                <option value="MUHIDIN 18/16">MUHIDIN 18/16</option>
+                <option value="MURTADLO 33/02">MURTADLO 33/02</option>
+                <option value="NANA PERMANA 35/06">NANA PERMANA 35/06</option>
+                <option value="NASRI 10/16">NASRI 10/16</option>
+                <option value="NG SUN KONG / ALEX 37/09">NG SUN KONG / ALEX 37/09</option>
+                <option value="NOVIYANTO 18/03">NOVIYANTO 18/03</option>
+                <option value="OKI FIRMANSYAH 17/02">OKI FIRMANSYAH 17/02</option>
+                <option value="OMAN RUSMANA 07/11">OMAN RUSMANA 07/11</option>
+                <option value="PIAN SOPIAN 11/17">PIAN SOPIAN 11/17</option>
+                <option value="PITRA MEI NURYAWAN 10/12">PITRA MEI NURYAWAN 10/12</option>
+                <option value="PRIYANTO 17/03">PRIYANTO 17/03</option>
+                <option value="PURWOKO WURIAN 08/07">PURWOKO WURIAN 08/07</option>
+                <option value="R DEDE MULYANINGSIH 18/05">R DEDE MULYANINGSIH 18/05</option>
+                <option value="RAHMAN SANANDRA 26/03">RAHMAN SANANDRA 26/03</option>
+                <option value="RANGGA RADHITYA 23/02">RANGGA RADHITYA 23/02</option>
+                <option value="RASNO 20/10">RASNO 20/10</option>
+                <option value="RASTIWI 26/02">RASTIWI 26/02</option>
+                <option value="RENDY IRAWADI 02/05">RENDY IRAWADI 02/05</option>
+                <option value="RESDYANSYAH ANDIKA PUTRA 02/11">RESDYANSYAH ANDIKA PUTRA 02/11</option>
+                <option value="RESMONO WIHDIARTO 36/15">RESMONO WIHDIARTO 36/15</option>
+                <option value="REX TANGKAU 37/20">REX TANGKAU 37/20</option>
+                <option value="REZA MUHAMAD IQBAL 29/30">REZA MUHAMAD IQBAL 29/30</option>
+                <option value="RICHO BRIANTARA 35/05">RICHO BRIANTARA 35/05</option>
+                <option value="RIDWAN ACHMAD 20/15">RIDWAN ACHMAD 20/15</option>
+                <option value="RIFAI ARIFIANDY 03/01">RIFAI ARIFIANDY 03/01</option>
+                <option value="RIFKY NURDIANSYAH 12/11">RIFKY NURDIANSYAH 12/11</option>
+                <option value="RIFKY RATSA PANICIH 18/12">RIFKY RATSA PANICIH 18/12</option>
+                <option value="RINAWATI 03/01">RINAWATI 03/01</option>
+                <option value="RINO FEDRYANSYAH 00/28">RINO FEDRYANSYAH 00/28</option>
+                <option value="RISYANTO 06/10">RISYANTO 06/10</option>
+                <option value="RIYANTO 01/27">RIYANTO 01/27</option>
+                <option value="RONNY MAULUDY KURNIAWAN 29/26">RONNY MAULUDY KURNIAWAN 29/26</option>
+                <option value="ROSDIANA 09/08">ROSDIANA 09/08</option>
+                <option value="RUDYMAN SURAJAYA MARHAM 27/02">RUDYMAN SURAJAYA MARHAM 27/02</option>
+                <option value="RULI BAWONO 16/03">RULI BAWONO 16/03</option>
+                <option value="SAEPU ROHMAN 10/18">SAEPU ROHMAN 10/18</option>
+                <option value="SAIFUL HIDAYAT 03/70">SAIFUL HIDAYAT 03/70</option>
+                <option value="SANUSI 00/03">SANUSI 00/03</option>
+                <option value="SATORIH 37/25">SATORIH 37/25</option>
+                <option value="SATRIA ADI NUGRAHA 33/01">SATRIA ADI NUGRAHA 33/01</option>
+                <option value="SELAMAT HARUN 01/02">SELAMAT HARUN 01/02</option>
+                <option value="SHINDID AFIZARIR HAJIB 01/28">SHINDID AFIZARIR HAJIB 01/28</option>
+                <option value="SIH RAMPING USADANI 35/10">SIH RAMPING USADANI 35/10</option>
+                <option value="SITI RACHMANIA 17/01">SITI RACHMANIA 17/01</option>
+                <option value="SOLIHIN 11/02">SOLIHIN 11/02</option>
+                <option value="SONNY TRIO W 09/07">SONNY TRIO W 09/07</option>
+                <option value="SONY SUMARSONO 28/15">SONY SUMARSONO 28/15</option>
+                <option value="SRI HANTI NINGSIH 09/07">SRI HANTI NINGSIH 09/07</option>
+                <option value="SUJONO HETTO 00/06">SUJONO HETTO 00/06</option>
+                <option value="SUKARDI 08/02">SUKARDI 08/02</option>
+                <option value="SUKARDI 17/09">SUKARDI 17/09</option>
+                <option value="SUMINAH 00/07">SUMINAH 00/07</option>
+                <option value="SUPRIATNA 05/05">SUPRIATNA 05/05</option>
+                <option value="SUPRIHATIN 07/12">SUPRIHATIN 07/12</option>
+                <option value="SURIADI TANDRA 01/18">SURIADI TANDRA 01/18</option>
+                <option value="SUTRISNO 35/12">SUTRISNO 35/12</option>
+                <option value="SUWANTO ,SH 02/26">SUWANTO ,SH 02/26</option>
+                <option value="TINNY DJUWANTINY 30/16">TINNY DJUWANTINY 30/16</option>
+                <option value="TIRWAN 00/51">TIRWAN 00/51</option>
+                <option value="TONY 20/16">TONY 20/16</option>
+                <option value="TRIANA ADI DESTIAN 30/06">TRIANA ADI DESTIAN 30/06</option>
+                <option value="TRY BAGUS HANGGA PATTY 28/01">TRY BAGUS HANGGA PATTY 28/01</option>
+                <option value="WARSITO 29/07">WARSITO 29/07</option>
+                <option value="WATINI 00/08">WATINI 00/08</option>
+                <option value="WIDARTI 10/08">WIDARTI 10/08</option>
+                <option value="WIDYANARKO INDRA PRASETYO 03/01">WIDYANARKO INDRA PRASETYO 03/01</option>
+                <option value="WILLY MUNANDRA 29/20">WILLY MUNANDRA 29/20</option>
+                <option value="WINARDI 00/01">WINARDI 00/01</option>
+                <option value="WINARNO 09/07">WINARNO 09/07</option>
+                <option value="WINDIA YULITA SARI 23/10">WINDIA YULITA SARI 23/10</option>
+                <option value="WINOTO, ST 29/29">WINOTO, ST 29/29</option>
+                <option value="YUDI RACHMAN 23/12">YUDI RACHMAN 23/12</option>
+                <option value="YUDI SANTOSA 08/12">YUDI SANTOSA 08/12</option>
+                <option value="YULI SETIAWAN 35/02">YULI SETIAWAN 35/02</option>
+                <option value="YULIAN DWI CAHYO 03/12">YULIAN DWI CAHYO 03/12</option>
+                <option value="YUSAN REZA ARIEF 11/11">YUSAN REZA ARIEF 11/11</option>
+                <option value="YUSRI INDRA 29/32">YUSRI INDRA 29/32</option>
+                <option value="YUSUP 06/07">YUSUP 06/07</option>
+
+            </select>
+            <!-- <datalist id="candidateList">
+                <option value="He">
+                <option value="Man">
+                <option value="Power">
+            </datalist> -->
+
+            <button type="submit" class="submit-btn">Submit Vote</button>
+        </form>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $('#candidate').select2({
+                placeholder: "Suggested Candidate",
+                allowClear: true
+            });
+        });
+        const voteBtn = document.getElementById('voteBtn');
+        const voteForm = document.getElementById('voteForm');
+
+        voteBtn.addEventListener('click', () => {
+            voteForm.style.display = 'block';
+            voteBtn.style.display = 'none';
+        });
+
+        voteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const house = document.getElementById('house').value.trim();
+            const candidate = document.getElementById('candidate').value.trim();
+
+            const formData = {
+                name,
+                house,
+                candidate
+            };
+
+            fetch('https://vote-beta-ten.vercel.app/vote', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Thank you for voting!');
+                    voteForm.reset();
+                    voteForm.style.display = 'none';
+                    voteBtn.style.display = 'inline-block';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting your vote.');
+                });
+
+        });
+    </script>
+
+</body>
+
+</html>
